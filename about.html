@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelExplorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Premium About Page Styles */
+        .about-hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?travel');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .about-hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .about-hero p {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .hero-buttons .btn {
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .hero-buttons .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mission & Values */
+        .mission-values {
+            padding: 8rem 5%;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        }
+        .mission-values h2,
+        .premium-team h2,
+        .impact-section h2 {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 3rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .mission-values h2::after,
+        .premium-team h2::after,
+        .impact-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .mission-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .mission-card i {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        .mission-card h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Premium Team Section */
+        .premium-team {
+            padding: 8rem 5%;
+            background: white;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .team-member img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .team-member-content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .team-member h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .team-member p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+        .team-member .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .team-member .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            padding: 8rem 5%;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        .stat-card {
+            background: white;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 3.5rem;
+            }
+            .about-hero p {
+                font-size: 1.5rem;
+            }
+            .mission-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .team-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TravelExplorer</div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="destinations.html"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                    <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Premium Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Our Story</h1>
+            <p>Discover the journey of our travel company and meet our passionate team</p>
+            <div class="hero-buttons">
+                <a href="#team" class="btn primary">Meet Our Team</a>
+                <a href="#testimonials" class="btn secondary">Read Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="mission-values" id="mission">
+        <h2>Our Mission & Values</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <i class="fas fa-compass"></i>
+                <h3>Explore the World</h3>
+                <p>Our passion is to help you discover new destinations and create unforgettable experiences.</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-heart"></i>
+                <h3>Create Memories</h3>
+                <p>We believe travel is about more than just seeing places - it's about making lasting memories.</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-users"></i>
+                <h3>Build Community</h3>
+                <p>Join our community of travelers who share experiences and inspire each other.</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-star"></i>
+                <h3>Excellence</h3>
+                <p>We strive for excellence in everything we do, from content creation to customer service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Team Section -->
+    <section class="premium-team" id="team">
+        <h2>Meet Our Expert Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://source.unsplash.com/300x300/?portrait" alt="Team Member 1">
+                <div class="team-member-content">
+                    <h3>Ahmed Khan</h3>
+                    <p>Founder & CEO</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/300x300/?portrait" alt="Team Member 2">
+                <div class="team-member-content">
+                    <h3>Sara Ali</h3>
+                    <p>Chief Travel Expert</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/300x300/?portrait" alt="Team Member 3">
+                <div class="team-member-content">
+                    <h3>Imran Shah</h3>
+                    <p>Content Director</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section" id="impact">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">100K+</div>
+                <div class="stat-label">Happy Travelers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Countries Covered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support Available</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1M+</div>
+                <div class="stat-label">Monthly Readers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="premium-testimonials" id="testimonials">
+        <h2>What Our Readers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"TravelExplorer has been my go-to source for reliable travel information. Their guides have helped me plan amazing trips!"</p>
+                <div class="author-info">
+                    <img src="https://source.unsplash.com/100x100/?portrait" alt="Reader" class="author-img">
+                    <div class="author-details">
+                        <span class="author-name">Sarah Johnson</span>
+                        <span class="author-location">New York, USA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TravelExplorer</h3>
+                <p>Your trusted travel companion</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> contact@travelexplorer.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

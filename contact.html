@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TravelExplorer</title>
+    <meta name="description" content="Get in touch with TravelExplorer - Contact us for inquiries, collaborations, or feedback">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Hero Section Styles */
+        .contact-hero {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        .hero-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .hero-buttons .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        .hero-buttons .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 3rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+        .form-group textarea {
+            height: 200px;
+            resize: vertical;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Boxes Styles */
+        .contact-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 4rem 5%;
+            padding: 2rem;
+        }
+        .contact-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .contact-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .contact-box i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        .contact-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .contact-box p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .contact-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .contact-box a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Social Media Box */
+        .social-media-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 2rem 5%;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        .social-links a {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        /* Map Styles */
+        #map {
+            height: 500px;
+            width: 100%;
+            margin: 3rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TravelExplorer</div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="destinations.html"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="hero contact-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?office');">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Let's Connect</h1>
+                <p class="hero-subtitle">Your journey starts here - we're here to help you plan your perfect travel experience</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Happy Travelers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries Covered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support Available</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary">Schedule a Consultation</a>
+                    <a href="#" class="btn secondary">Get Travel Tips</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Boxes -->
+    <section class="contact-boxes">
+        <!-- Contact Details Box -->
+        <div class="contact-box">
+            <i class="fas fa-envelope"></i>
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> ayeshabashir336@gmail.com</p>
+            <p><strong>Phone:</strong> +92 300 1234567</p>
+            <p><strong>Address:</strong> 123 Main Street, Burewala, Punjab, Pakistan</p>
+            <p><strong>Working Hours:</strong> Mon-Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <!-- Email Box -->
+        <div class="contact-box">
+            <i class="fas fa-paper-plane"></i>
+            <h3>Email Us</h3>
+            <p>For general inquiries, please email us at:</p>
+            <a href="mailto:info@travelexplorer.com">info@travelexplorer.com</a>
+            <p>For media inquiries:</p>
+            <a href="mailto:media@travelexplorer.com">media@travelexplorer.com</a>
+            <p>For partnerships:</p>
+            <a href="mailto:partners@travelexplorer.com">partners@travelexplorer.com</a>
+        </div>
+
+        <!-- Social Media Box -->
+        <div class="social-media-box">
+            <h2>Connect With Us</h2>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section id="map-section">
+        <h2>Our Location</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About TravelExplorer</h3>
+                <p>Your ultimate guide to discovering amazing travel destinations and stories from around the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Google Maps
+        function initMap() {
+            // Create map options
+            const mapOptions = {
+                zoom: 12,
+                center: { lat: 30.4771, lng: 72.4057 },
+                mapTypeId: 'roadmap',
+                styles: [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#444444"}]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{"color": "#f2f2f2"}]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [{"saturation": -100}, {"lightness": 45}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "simplified"}]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{"visibility": "off"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{"color": "#46bcec"}, {"visibility": "on"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#c9c9c9"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#000000"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"color": "#ffffff"}, {"lightness": -16}]
+                    }
+                ]
+            };
+
+            // Create map
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Create custom marker icon
+            const markerIcon = {
+                path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
+                fillColor: '#1a73e8',
+                fillOpacity: 1,
+                strokeColor: '#1a73e8',
+                strokeWeight: 14,
+                scale: 0.7,
+                labelOrigin: new google.maps.Point(0, 0)
+            };
+
+            // Create marker
+            const marker = new google.maps.Marker({
+                position: { lat: 30.4771, lng: 72.4057 },
+                map: map,
+                title: 'TravelExplorer Office',
+                icon: markerIcon,
+                label: {
+                    text: 'T',
+                    color: 'white',
+                    fontWeight: 'bold'
+                }
+            });
+
+            // Add info window
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div class="info-window">
+                        <h3>TravelExplorer Office</h3>
+                        <p>Burewala, Punjab, Pakistan</p>
+                        <p>Get directions to our office</p>
+                    </div>
+                `
+            });
+
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+
+            // Add zoom controls
+            map.setOptions({
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_CENTER
+                }
+            });
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <style>
+        /* Info Window Styles */
+        .info-window {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .info-window h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .info-window p {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</body>
+</html>

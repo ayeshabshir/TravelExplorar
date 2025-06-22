@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - TravelExplorer</title>
+    <meta name="description" content="Read our latest travel stories, tips, and adventures from around the world">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TravelExplorer</div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="blog.html" class="active"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="destinations.html"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="hero blog-hero">
+        <div class="hero-content">
+            <h1>Travel Stories & Adventures</h1>
+            <p>Explore our collection of travel stories, tips, and adventures from around the world</p>
+            <div class="search-container">
+                <form id="blogSearchForm" class="search-form">
+                    <input type="text" id="blogSearch" placeholder="Search articles..." class="search-input">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="categories">
+        <div class="section-header">
+            <h2>Explore by Category</h2>
+            <p>Discover our curated collection of travel stories and guides</p>
+        </div>
+        <div class="category-grid">
+            <a href="categories/adventure.html" class="category-card">
+                <i class="fas fa-mountain"></i>
+                <h3>Adventure Travel</h3>
+            </a>
+            <a href="categories/budget.html" class="category-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Budget Travel</h3>
+            </a>
+            <a href="categories/luxury.html" class="category-card">
+                <i class="fas fa-plane"></i>
+                <h3>Luxury Travel</h3>
+            </a>
+            <a href="categories/solo.html" class="category-card">
+                <i class="fas fa-user"></i>
+                <h3>Solo Travel</h3>
+            </a>
+            <a href="categories/family.html" class="category-card">
+                <i class="fas fa-family"></i>
+                <h3>Family Travel</h3>
+            </a>
+            <a href="categories/road-trips.html" class="category-card">
+                <i class="fas fa-car"></i>
+                <h3>Road Trips</h3>
+            </a>
+            <a href="categories/backpacking.html" class="category-card">
+                <i class="fas fa-backpack"></i>
+                <h3>Backpacking</h3>
+            </a>
+            <a href="categories/cultural.html" class="category-card">
+                <i class="fas fa-culture"></i>
+                <h3>Cultural Travel</h3>
+            </a>
+            <a href="categories/sustainable.html" class="category-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Sustainable & Eco Travel</h3>
+            </a>
+            <a href="categories/beach.html" class="category-card">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3>Beach Holidays</h3>
+            </a>
+            <a href="categories/city.html" class="category-card">
+                <i class="fas fa-city"></i>
+                <h3>City Breaks</h3>
+            </a>
+            <a href="categories/wellness.html" class="category-card">
+                <i class="fas fa-heart"></i>
+                <h3>Wellness & Retreat Travel</h3>
+            </a>
+            <a href="categories/food.html" class="category-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Culinary Travel</h3>
+            </a>
+            <a href="categories/digital-nomad.html" class="category-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Digital Nomad / Remote Work Travel</h3>
+            </a>
+            <a href="categories/historical.html" class="category-card">
+                <i class="fas fa-history"></i>
+                <h3>Historical & Heritage Travel</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="featured-stories">
+        <div class="section-header">
+            <h2>Featured Stories</h2>
+            <p>Handpicked travel stories from our expert writers</p>
+        </div>
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?himalayas" alt="Himalayan Adventure">
+                <div class="article-content">
+                    <span class="category">Adventure</span>
+                    <h3>Conquering the Himalayas: A Trekker's Journey</h3>
+                    <p>Join me on a breathtaking journey through the Himalayan mountains...</p>
+                    <div class="article-meta">
+                        <span class="author">By John Doe</span>
+                        <span class="date">June 20, 2025</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <a href="articles/himalayas.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?tokyo" alt="Tokyo Life">
+                <div class="article-content">
+                    <span class="category">City Breaks</span>
+                    <h3>24 Hours in Tokyo: A Local's Guide</h3>
+                    <p>Experience Tokyo's hidden gems and must-visit spots...</p>
+                    <div class="article-meta">
+                        <span class="author">By Sarah Johnson</span>
+                        <span class="date">June 15, 2025</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <a href="articles/tokyo.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?paris" alt="Paris Adventure">
+                <div class="article-content">
+                    <span class="category">City Breaks</span>
+                    <h3>Paris: The City of Love and Adventure</h3>
+                    <p>Discover the romantic streets and hidden gems of Paris...</p>
+                    <div class="article-meta">
+                        <span class="author">By Jane Smith</span>
+                        <span class="date">June 12, 2025</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <a href="articles/paris.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Popular Posts -->
+    <section class="popular-posts">
+        <h2>Popular Posts</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?newyork" alt="New York">
+                <div class="article-content">
+                    <span class="category">City Breaks</span>
+                    <h3>The Ultimate New York City Guide</h3>
+                    <p>Everything you need to know about exploring New York City...</p>
+                    <div class="article-meta">
+                        <span class="author">By Michael Chen</span>
+                        <span class="date">June 10, 2025</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                    <a href="articles/newyork.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?maldives" alt="Maldives">
+                <div class="article-content">
+                    <span class="category">Beach Travel</span>
+                    <h3>Maldives: Paradise Found</h3>
+                    <p>Discover the most beautiful beaches and resorts in the Maldives...</p>
+                    <div class="article-meta">
+                        <span class="author">By Emma Wilson</span>
+                        <span class="date">June 8, 2025</span>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <a href="articles/maldives.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://source.unsplash.com/800x600/?iceland" alt="Iceland">
+                <div class="article-content">
+                    <span class="category">Adventure</span>
+                    <h3>Exploring Iceland's Natural Wonders</h3>
+                    <p>A journey through Iceland's stunning landscapes and natural beauty...</p>
+                    <div class="article-meta">
+                        <span class="author">By David Brown</span>
+                        <span class="date">June 5, 2025</span>
+                        <span class="read-time">9 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="section-content">
+            <div class="newsletter-content">
+                <div class="newsletter-header">
+                    <h2>Join Our Travel Community</h2>
+                    <p class="newsletter-tagline">Be the first to know about our latest travel guides and exclusive offers</p>
+                </div>
+                <div class="newsletter-features">
+                    <div class="feature-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Weekly Travel Tips</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Destination Guides</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-camera"></i>
+                        <span>Travel Photography</span>
+                    </div>
+                </div>
+                <div class="newsletter-form-container">
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="newsletter-btn">
+                                <span>Subscribe Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="newsletter-note">No spam. Unsubscribe anytime. We respect your privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About TravelExplorer</h3>
+                <p>Your ultimate guide to discovering amazing travel destinations and stories from around the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Blog search functionality
+document.getElementById('blogSearch').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const articles = document.querySelectorAll('.article-card');
+    
+    articles.forEach(article => {
+        const title = article.querySelector('h3').textContent.toLowerCase();
+        const category = article.querySelector('.category').textContent.toLowerCase();
+        const content = article.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || category.includes(searchTerm) || content.includes(searchTerm)) {
+            article.style.display = 'block';
+        } else {
+            article.style.display = 'none';
+        }
+    });
+});
+
+// Newsletter form submission
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing! You will receive our latest updates soon.');
+        this.reset();
+    });
+}
+    </script>
+</body>
+</html>

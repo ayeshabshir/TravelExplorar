@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations - TravelExplorer</title>
+    <meta name="description" content="Discover amazing travel destinations around the world with our curated collection of travel guides and experiences">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TravelExplorer</div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="destinations.html" class="active"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Destinations Hero Section -->
+    <section class="hero destinations-hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Destination</h1>
+            <p>Discover the world's most beautiful places and create unforgettable memories</p>
+            <div class="search-container">
+                <form class="search-form" id="destinationSearch">
+                    <div class="search-input-group">
+                        <input type="text" id="searchInput" placeholder="Where would you like to go?">
+                        <select id="regionSelect" class="region-select">
+                            <option value="">All Regions</option>
+                            <option value="asia">Asia</option>
+                            <option value="americas">Americas</option>
+                            <option value="europe">Europe</option>
+                            <option value="africa">Africa</option>
+                            <option value="australia">Australia</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn primary">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Categories -->
+    <section class="categories">
+        <div class="section-header">
+            <h2>Explore by Region</h2>
+            <p>Discover our curated collection of destinations across the globe</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?tokyo')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Asia</h3>
+                    <p>Discover the rich cultures and stunning landscapes of Asia</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?newyork')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Americas</h3>
+                    <p>Explore the diverse cities and natural wonders of the Americas</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?paris')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Europe</h3>
+                    <p>Experience the history and charm of European destinations</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?safari')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Africa</h3>
+                    <p>Discover the wild beauty and vibrant cultures of Africa</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?sydney')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-australia"></i>
+                    <h3>Australia</h3>
+                    <p>Explore the natural wonders and unique wildlife of Australia</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?middle-east')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Middle East</h3>
+                    <p>Experience ancient history and modern marvels in the Middle East</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?caribbean')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Caribbean</h3>
+                    <p>Discover tropical paradise and vibrant island culture</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?central-america')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Central America</h3>
+                    <p>Explore ancient ruins and lush rainforests</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?scandinavia')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Scandinavia</h3>
+                    <p>Experience the beauty of Nordic countries and fjords</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://source.unsplash.com/400x300/?southeast-asia')"></div>
+                <div class="category-content">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Southeast Asia</h3>
+                    <p>Discover tropical beaches and ancient temples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-destinations">
+        <div class="section-header">
+            <h2>Featured Destinations</h2>
+
+        </div>
+        <div class="articles-grid">
+            <article class="article-card" data-type="city">
+                <img src="https://source.unsplash.com/400x300/?tokyo" alt="Tokyo">
+                <div class="article-content">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Experience the vibrant city life of Tokyo's hidden corners, from bustling Shibuya to serene temples.</p>
+                    <div class="destination-meta">
+                        <span class="region">Asia</span>
+                        <span class="type">City Break</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="city">
+                <img src="https://source.unsplash.com/400x300/?paris" alt="Paris">
+                <div class="article-content">
+                    <h3>Paris, France</h3>
+                    <p>Discover the romantic streets and hidden gems of Paris, from the Eiffel Tower to charming cafes.</p>
+                    <div class="destination-meta">
+                        <span class="region">Europe</span>
+                        <span class="type">City Break</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="city">
+                <img src="https://source.unsplash.com/400x300/?newyork" alt="New York">
+                <div class="article-content">
+                    <h3>New York City, USA</h3>
+                    <p>Experience the energy and excitement of the Big Apple, from Times Square to Central Park.</p>
+                    <div class="destination-meta">
+                        <span class="region">Americas</span>
+                        <span class="type">City Break</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="nature">
+                <img src="https://source.unsplash.com/400x300/?norway" alt="Norway">
+                <div class="article-content">
+                    <h3>Norway Fjords</h3>
+                    <p>Explore the breathtaking fjords of Norway, surrounded by majestic mountains and pristine waters.</p>
+                    <div class="destination-meta">
+                        <span class="region">Europe</span>
+                        <span class="type">Nature & Adventure</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="luxury">
+                <img src="https://source.unsplash.com/400x300/?maldives" alt="Maldives">
+                <div class="article-content">
+                    <h3>Maldives</h3>
+                    <p>Experience luxury overwater bungalows and crystal-clear waters in this tropical paradise.</p>
+                    <div class="destination-meta">
+                        <span class="region">Asia</span>
+                        <span class="type">Luxury Getaways</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="culture">
+                <img src="https://source.unsplash.com/400x300/?rome" alt="Rome">
+                <div class="article-content">
+                    <h3>Rome, Italy</h3>
+                    <p>Walk through history in Rome's ancient ruins, from the Colosseum to the Vatican.</p>
+                    <div class="destination-meta">
+                        <span class="region">Europe</span>
+                        <span class="type">Cultural Experiences</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="food">
+                <img src="https://source.unsplash.com/400x300/?barcelona" alt="Barcelona">
+                <div class="article-content">
+                    <h3>Barcelona, Spain</h3>
+                    <p>Indulge in Spanish cuisine and explore Gaudí's architectural masterpieces in vibrant Barcelona.</p>
+                    <div class="destination-meta">
+                        <span class="region">Europe</span>
+                        <span class="type">Food & Wine</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="family">
+                <img src="https://source.unsplash.com/400x300/?cancun" alt="Cancun">
+                <div class="article-content">
+                    <h3>Cancun, Mexico</h3>
+                    <p>Perfect family getaway with beautiful beaches, water parks, and ancient Mayan ruins.</p>
+                    <div class="destination-meta">
+                        <span class="region">Americas</span>
+                        <span class="type">Family Friendly</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+            <article class="article-card" data-type="wellness">
+                <img src="https://source.unsplash.com/400x300/?bali" alt="Bali">
+                <div class="article-content">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Find peace and tranquility in Bali's yoga retreats and wellness centers.</p>
+                    <div class="destination-meta">
+                        <span class="region">Asia</span>
+                        <span class="type">Wellness Retreats</span>
+                    </div>
+                    <a href="#" class="read-more">Explore Now</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About TravelExplorer</h3>
+                <p>Your ultimate guide to discovering amazing travel destinations and stories from around the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer - Your Ultimate Travel Companion</title>
+    <meta name="description" content="Discover amazing travel destinations, tips, and stories from around the world. Your ultimate guide to exploring the globe.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">TravelExplorer</div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="sidebar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li><a href="destinations.html"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore the world's most beautiful destinations with our expert guides</p>
+            <div class="hero-buttons">
+                <a href="destinations.html" class="btn primary">Explore Destinations</a>
+                <a href="blog.html" class="btn secondary">Read Travel Stories</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="latest-articles">
+        <h2>Latest Articles</h2>
+        <div class="articles-grid">
+            <article class="article-card" onclick="window.location.href='articles/himalayas.html'">
+                <img src="https://source.unsplash.com/400x300/?mountains" alt="Mountain Adventure">
+                <div class="article-content">
+                    <h3>Exploring the Hidden Gems of Himalayas</h3>
+                    <p>Discover the breathtaking beauty of the Himalayan mountains...</p>
+                    <a href="articles/himalayas.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/beach-destinations.html'">
+                <img src="https://source.unsplash.com/400x300/?beach" alt="Beach Paradise">
+                <div class="article-content">
+                    <h3>Top 5 Beach Destinations in Asia</h3>
+                    <p>Experience the perfect blend of sun, sand, and relaxation...</p>
+                    <a href="articles/beach-destinations.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/tokyo.html'">
+                <img src="https://source.unsplash.com/400x300/?city" alt="City Life">
+                <div class="article-content">
+                    <h3>Urban Adventures in the Tokyo</h3>
+                    <p>Explore the vibrant city life of Tokyo's hidden corners...</p>
+                    <a href="articles/tokyo.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/forests.html'">
+                <img src="https://source.unsplash.com/400x300/?forest" alt="Nature Walk">
+                <div class="article-content">
+                    <h3>Walking Through Ancient Forests</h3>
+                    <p>Experience the serenity of nature in these ancient forest trails...</p>
+                    <a href="articles/forests.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/sahara.html'">
+                <img src="https://source.unsplash.com/400x300/?desert" alt="Desert Journey">
+                <div class="article-content">
+                    <h3>Sunset Safari in the Sahara Desert</h3>
+                    <p>Discover the magic of desert landscapes at sunset...</p>
+                    <a href="articles/sahara.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/costa-rica.html'">
+                <img src="https://source.unsplash.com/400x300/?waterfall" alt="Nature Adventure">
+                <div class="article-content">
+                    <h3>Waterfall Hiking in Costa Rica</h3>
+                    <p>Experience the thrill of hiking to hidden waterfalls in Costa Rica...</p>
+                    <a href="articles/costa-rica.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/cruise.html'">
+                <img src="https://source.unsplash.com/400x300/?cruise" alt="Cruise Adventure">
+                <div class="article-content">
+                    <h3>Luxury Caribbean Cruise Guide</h3>
+                    <p>Everything you need to know about planning your perfect cruise vacation...</p>
+                    <a href="articles/cruise.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            <article class="article-card" onclick="window.location.href='articles/railway.html'">
+                <img src="https://source.unsplash.com/400x300/?railway" alt="Train Journey">
+                <div class="article-content">
+                    <h3>Trans-Siberian Railway Adventure</h3>
+                    <p>Discover the world's longest railway journey across Russia...</p>
+                    <a href="articles/railway.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Categories Section -->
+    <section class="categories">
+        <h2>Explore by Travel</h2>
+        <div class="category-grid">
+            <a href="categories/adventure.html" class="category-card">
+                <i class="fas fa-mountain"></i>
+                <h3>Adventure Travel</h3>
+            </a>
+            <a href="categories/beach.html" class="category-card">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3>Beach Travel</h3>
+            </a>
+            <a href="categories/hiking.html" class="category-card">
+                <i class="fas fa-hiking"></i>
+                <h3>Hiking & Trekking</h3>
+            </a>
+            <a href="categories/city.html" class="category-card">
+                <i class="fas fa-city"></i>
+                <h3>City Breaks</h3>
+            </a>
+            <a href="categories/camping.html" class="category-card">
+                <i class="fas fa-campground"></i>
+                <h3>Camping</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About TravelExplorer</h3>
+                <p>Your ultimate guide to discovering amazing travel destinations and stories from around the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
